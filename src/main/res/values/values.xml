@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="realm_browser_change_column_width_overlay_color">#80000000</color>
+    <color name="realm_browser_colorAccent">#009688</color>
+    <color name="realm_browser_colorPrimary">#212121</color>
+    <color name="realm_browser_colorPrimaryDark">#000</color>
+    <color name="realm_browser_dark_gray">#a9a9a9</color>
+    <color name="realm_browser_database_column_title_background_color">@color/realm_browser_dark_gray</color>
+    <color name="realm_browser_db_config_primary_text_color">#000</color>
+    <color name="realm_browser_db_table_primary_text_color">#000</color>
+    <color name="realm_browser_default_bg">#FFFFFF</color>
+    <color name="realm_browser_divider_color">@color/realm_browser_dark_gray</color>
+    <color name="realm_browser_dummy_divider_color">#800000FF</color>
+    <color name="realm_browser_edit_dialog_error_color">#F00</color>
+    <color name="realm_browser_lt_gray">#E2E2E2</color>
+    <color name="realm_browser_notification_color">#f0727d</color>
+    <color name="realm_browser_secondary">#b8d8e6</color>
+    <dimen name="realm_browser_activity_horizontal_margin">16dp</dimen>
+    <dimen name="realm_browser_activity_vertical_margin">16dp</dimen>
+    <dimen name="realm_browser_class_list_button_height">48dp</dimen>
+    <dimen name="realm_browser_class_list_button_text_size">18sp</dimen>
+    <dimen name="realm_browser_class_list_header_padding_bottom">24dp</dimen>
+    <dimen name="realm_browser_class_list_header_padding_top">24dp</dimen>
+    <dimen name="realm_browser_class_list_item_drawable_padding">32dp</dimen>
+    <dimen name="realm_browser_class_list_item_padding_bottom">12dp</dimen>
+    <dimen name="realm_browser_class_list_item_padding_top">12dp</dimen>
+    <dimen name="realm_browser_class_list_item_text_size">18sp</dimen>
+    <dimen name="realm_browser_class_list_padding_left">12dp</dimen>
+    <dimen name="realm_browser_class_list_padding_right">16dp</dimen>
+    <dimen name="realm_browser_database_breadcrumb_height">48dp</dimen>
+    <dimen name="realm_browser_database_breadcrumb_padding_left">20dp</dimen>
+    <dimen name="realm_browser_database_list_item_left">28dp</dimen>
+    <dimen name="realm_browser_database_list_item_min_height">48dp</dimen>
+    <dimen name="realm_browser_database_list_item_padding_top_bottom">4dp</dimen>
+    <dimen name="realm_browser_database_list_item_row_number_margin_left">4dp</dimen>
+    <dimen name="realm_browser_edit_dialog_padding">4dp</dimen>
+    <dimen name="realm_browser_min_column_width">180dp</dimen>
+    <string name="realm_browser_btn_fill_title">Fill data</string>
+    <string name="realm_browser_byte_array_is_null">Byte array is <b>NULL</b></string>
+    <string name="realm_browser_cancel">Cancel</string>
+    <string name="realm_browser_deselect_all">Deselect All</string>
+    <string name="realm_browser_false_string">False</string>
+    <string name="realm_browser_field_filter_dialog_title">Select fields to display</string>
+    <string name="realm_browser_menu_filter_title">Filter</string>
+    <string name="realm_browser_menu_search_title">Search through database</string>
+    <string name="realm_browser_notification_text">Show database</string>
+    <string name="realm_browser_notification_title">Realm Browser</string>
+    <string name="realm_browser_ok">Ok</string>
+    <string formatted="false" name="realm_browser_realm_class_notification">Add class %s to RealmBrowser.Builder.</string>
+    <string formatted="false" name="realm_browser_realm_file_notification">Class %s is located in %s file.</string>
+    <string name="realm_browser_reset_to_null">Reset to <b>NULL</b></string>
+    <string name="realm_browser_search_hint_long"><b>Search usage notes:</b>\n Now RealmBrowser doesn\'t support searching
+        through <i>byte[]</i>, <i>Date</i>, <i>RealmObject</i> and <i>RealmList</i> field types.\n\n
+        To search through other field types use the following request format:\n
+        <b><i>fieldName:value</i></b>.\nSearch over <b>String</b> type fields uses <i>contains()</i>
+        function (search is case sensitive), for other types function <i>equals()</i> is used.
+    </string>
+    <string name="realm_browser_search_hint_short">fieldName:value</string>
+    <string name="realm_browser_select_all">Select All</string>
+    <string name="realm_browser_true_string">True</string>
+    <string formatted="false" name="realm_browser_value_edit_error">Value %s can not be parsed as %s</string>
+    <style name="realm_browser_DatabaseName">
+        <item name="android:textSize">24sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/realm_browser_db_config_primary_text_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingLeft">4dp</item>
+    </style>
+    <style name="realm_browser_ProgressDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="realm_browser_RealmBrowserTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/realm_browser_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/realm_browser_colorPrimaryDark</item>
+        <item name="colorAccent">@color/realm_browser_colorAccent</item>
+    </style>
+    <style name="realm_browser_ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+    <style name="realm_browser_database_bread_crumb_style">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="realm_browser_database_column_title_annotation_style">
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="realm_browser_database_column_title_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/realm_browser_db_table_primary_text_color</item>
+    </style>
+    <style name="realm_browser_database_column_title_type_style">
+        <item name="android:textStyle">italic</item>
+    </style>
+</resources>
