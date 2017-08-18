@@ -249,7 +249,11 @@ public class DbTableFragment extends Fragment implements DatabaseClassAdapter.On
         if(itemId == id.field_filter) {
             FieldFilterDialogFragment.createInstance(mClazz).show(getChildFragmentManager(), FieldFilterDialogFragment.class.getSimpleName());
         }
-
+        if (itemId == id.delete_all){
+            RealmUtils.clearClassData(Realm.getDefaultInstance(), mClazz);
+            fillTable(mClazz, true);
+            mList.getAdapter().notifyDataSetChanged();
+        }
         return super.onOptionsItemSelected(item);
     }
 
