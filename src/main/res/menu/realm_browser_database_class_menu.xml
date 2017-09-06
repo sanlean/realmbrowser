@@ -12,4 +12,9 @@
         android:icon="@drawable/realm_browser_ic_options"
         android:title="@string/realm_browser_menu_filter_title"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/delete_all"
+        android:icon="@drawable/realm_browser_ic_delete_forever"
+        android:title="@string/realm_browser_menu_delete_forever"
+        app:showAsAction="ifRoom"/>
 </menu>
