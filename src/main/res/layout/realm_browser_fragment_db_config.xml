@@ -60,7 +60,7 @@
         android:layout_marginRight="@dimen/realm_browser_class_list_padding_right"
         android:background="@android:color/black"/>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/class_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"

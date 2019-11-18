@@ -4,18 +4,18 @@ import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v4.view.MenuItemCompat.OnActionExpandListener;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.SearchView.OnQueryTextListener;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.core.view.MenuItemCompat;
+import androidx.core.view.MenuItemCompat.OnActionExpandListener;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.style.TextAppearanceSpan;
@@ -79,7 +79,7 @@ public class DbTableFragment extends Fragment implements DatabaseClassAdapter.On
             return true;
         }
     };
-    private OnQueryTextListener mSearchListener = new OnQueryTextListener() {
+    private SearchView.OnQueryTextListener mSearchListener = new SearchView.OnQueryTextListener() {
         public boolean onQueryTextSubmit(String query) {
             return false;
         }
@@ -363,7 +363,7 @@ public class DbTableFragment extends Fragment implements DatabaseClassAdapter.On
     }
 
     public void onRowWasEdit(int position) {
-        Adapter adapter = mList.getAdapter();
+        RecyclerView.Adapter adapter = mList.getAdapter();
         if(adapter != null) {
             adapter.notifyItemChanged(position);
         }

@@ -1,12 +1,12 @@
 package io.realm.browser;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView.Adapter;
-import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import io.realm.RealmObject;
 import io.realm.browser.R.dimen;
 import io.realm.browser.R.id;
 
-class DatabaseClassAdapter extends Adapter<DatabaseClassAdapter.ItemViewHolder> {
+class DatabaseClassAdapter extends RecyclerView.Adapter<DatabaseClassAdapter.ItemViewHolder> {
     private List<Field> mFields;
     private List<? extends RealmObject> mData;
     private HorizontalScrollMediator mScrollMediator;
@@ -125,7 +125,7 @@ class DatabaseClassAdapter extends Adapter<DatabaseClassAdapter.ItemViewHolder> 
         mExternalCellClickListener = listener;
     }
 
-    static class ItemViewHolder extends ViewHolder {
+    static class ItemViewHolder extends RecyclerView.ViewHolder {
         TextView mRowNumber;
         RowView mRowView;
 

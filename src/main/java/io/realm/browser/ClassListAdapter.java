@@ -1,12 +1,13 @@
 package io.realm.browser;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -17,7 +18,7 @@ import io.realm.browser.R.layout;
 import io.realm.Realm;
 import io.realm.RealmObject;
 
-class ClassListAdapter extends Adapter<ClassListAdapter.ViewHolder> {
+class ClassListAdapter extends RecyclerView.Adapter<ClassListAdapter.ViewHolder> {
     private List<ClassListAdapter.DataHolder> mData;
     private ClassListAdapter.OnItemClickListener mItemClickListener;
 
@@ -69,7 +70,7 @@ class ClassListAdapter extends Adapter<ClassListAdapter.ViewHolder> {
         }
     }
 
-    static class ViewHolder extends android.support.v7.widget.RecyclerView.ViewHolder implements OnClickListener {
+    static class ViewHolder extends RecyclerView.ViewHolder implements OnClickListener {
         final TextView textView;
         final TextView recordsNumber;
         private final ClassListAdapter.OnItemClickListener mListener;

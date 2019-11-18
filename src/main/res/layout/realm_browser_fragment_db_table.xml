@@ -41,7 +41,7 @@
             android:layout_height="1dp"
             android:background="@drawable/realm_browser_divider_horizontal"/>
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/databaseList"
             android:layout_width="match_parent"
             android:layout_height="0dp"
